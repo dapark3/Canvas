@@ -3,11 +3,11 @@ classDiagram
     User -- Dashboard: Views
     User -- Calendar: Views
     User -- Inbox: Views
-    Dashboard --> Course: Displays
-    Course --> Event: Creates events
-    Course <|-- Assignment: Assigns
+    Dashboard --> Course: Holds
+    Course --> Event: Creates
+    Course <|-- Assignment: Assigned
     Event --> Calendar: Displays
-    Assignment <|-- Discussions: Are assigned
+    Course <|-- Discussions: Assigned
     Inbox <|-- Message: Displays
 
 
@@ -31,11 +31,14 @@ classDiagram
 
     class Message {
         -sender : string
-        -recipient(s) : list<string>
+        -recipients : list<string>
         -dateSent : int
         -timeSent: string
         -messageHeader : string
         -messageContent : string
+        -reply(string)
+        -forward(string)
+        -delete(string)
     }
 
     class Calendar {
@@ -88,7 +91,6 @@ classDiagram
         #assignmentName : string
         -assignmentInfo : string
         -submissionStatus : string
-        -dueDate : int
         -pointsValue : int
         -pointsEarned : int
         -dueDate : int
@@ -101,7 +103,15 @@ classDiagram
     }
 
     class Discussions {
+        -discussionName: string
         -discussionPost: string
-        -responsePost : list<string>
+        -responsePosts : list<string>
+        -submissionStatus : string
+        -dueDate : int
+        -pointsValue : int
+        -pointsEarned : int
+        -dueDate : int
+        -dateSubmitted : int
+        -timeSubmitted : string
         -reply(post)
     }
