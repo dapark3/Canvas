@@ -10,7 +10,7 @@ public class Messages
 
     private string timeSent;
 
-    protected string messageHeader;
+    private string messageHeader;
 
     private string messageContent;
 

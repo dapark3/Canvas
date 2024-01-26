@@ -2,7 +2,7 @@
 
 public class Assignment
 {
-    protected string assignmentName;
+    private string assignmentName;
 
     private string assignmentInfo;
 

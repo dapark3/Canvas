@@ -5,9 +5,9 @@ classDiagram
     User -- Inbox: Views
     Dashboard --> Course: Holds
     Course --> Event: Creates
-    Course <|-- Assignment: Assigned
-    Event --> Calendar: Displays
-    Course <|-- Discussion: Assigned
+    Course |--> Assignment: Assigns
+    Event <--| Calendar: Displays
+    Course |--> Discussion: Assigns
     Inbox <|-- Message: Displays
 
 
@@ -26,7 +26,7 @@ classDiagram
         -searchMessages(string)
         -searchUserByName(string)
         -sendMessage()
-        -deleteMessage(string)
+        -deleteMessage()
     }
 
     class Message {
@@ -38,7 +38,7 @@ classDiagram
         -messageContent : string
         -reply(string)
         -forward(string)
-        -delete(string)
+        -delete()
     }
 
     class Calendar {
@@ -88,7 +88,7 @@ classDiagram
     }
 
     class Assignment {
-        #assignmentName : string
+        -assignmentName : string
         -assignmentInfo : string
         -submissionStatus : string
         -pointsValue : int
