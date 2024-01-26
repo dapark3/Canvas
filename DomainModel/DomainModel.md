@@ -7,7 +7,7 @@ classDiagram
     Course --> Event: Creates
     Course <|-- Assignment: Assigned
     Event --> Calendar: Displays
-    Course <|-- Discussions: Assigned
+    Course <|-- Discussion: Assigned
     Inbox <|-- Message: Displays
 
 
@@ -102,7 +102,7 @@ classDiagram
         -submit()
     }
 
-    class Discussions {
+    class Discussion {
         -discussionName: string
         -discussionPost: string
         -responsePosts : list<string>

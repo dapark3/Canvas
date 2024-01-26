@@ -3,13 +3,32 @@
 public class Assignment
 {
     protected string assignmentName;
+
     private string assignmentInfo;
-    private int dueDate;
+
+    private string submissionStatus;
+
     private int pointsValue;
+
+    private int pointsEarned;
+
+    private string dueDate;
+
+    private string dateSubmitted;
+
+    private string timeSubmitted;
+
+    private List<string> submissionComments;
+
+    private List<string> viewSubmissionComments(){
+        return submissionComments;
+    }
+
+    private void uploadFile(string filePath) {
+        
+    }
+
     private void submit() {
 
-    }
-    private void upload() {
-        
     }
 }
