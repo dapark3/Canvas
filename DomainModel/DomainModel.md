@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
     User -- Dashboard: Views
     User -- Calendar: Views
