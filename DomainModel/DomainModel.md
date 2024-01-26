@@ -5,9 +5,9 @@ classDiagram
     User -- Inbox: Views
     Dashboard --> Course: Displays
     Course --> Event: Creates events
-    Course <|-- Assignments: Assigns
+    Course <|-- Assignment: Assigns
     Event --> Calendar: Displays
-    Assignments <|-- Discussions: Are assigned
+    Assignment <|-- Discussions: Are assigned
     Inbox <|-- Message: Displays
 
 
